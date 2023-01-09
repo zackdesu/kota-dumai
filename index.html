@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <style>
+    .cekisi {
+      border: solid black;
+    }
+
+    .banner {
+      height: 80vh;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://infopublik.id/assets/upload/headline//2022-pemprov-riau-alokasikan-rp207.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .isi-banner {
+      height: 100%;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .searchbutton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+    }
+
+    /* navbar */
+    .bar1,
+    .bar2,
+    .bar3 {
+      width: 35px;
+      height: 3px;
+      background-color: #1c1c1c;
+      margin: 7px 0;
+      transition: 0.4s;
+    }
+
+    .navcontain {
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .ganti .bar1 {
+      transform: translate(0, 10px) rotate(45deg);
+    }
+
+    .ganti .bar2 {
+      opacity: 0;
+    }
+
+    .ganti .bar3 {
+      transform: translate(0, -10px) rotate(-45deg);
+    }
+
+    /* navbar end */
+
+    .bgcarousel {
+      background-color: #ced4da;
+      height: 450px;
+    }
+
+    .carousel-item>img {
+      width: 640px;
+      height: 360px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body class="overflow-x-hidden">
+  <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Lambang_Kota_Dumai.png" alt="logo" width="25px">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" id="offcanvasNavbar" tabindex="-1">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Navigation</h5>
+          <button class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="offcanvasNavbar"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-3">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#">Tentang Dumai</a>
+            </li>
+            <li class="nav-item mx-3 dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Wisata Dumai
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Wisata di Dumai" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit"><img
+                src="https://www.freepnglogos.com/uploads/search-png/search-icon-transparent-images-vector-15.png"
+                alt="search" class="searchbutton"></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <div class="container-fluid banner">
+    <div class="container isi-banner col-lg-6">
+      <div class="text-center">
+        <p class="fs-1">
+          <strong>Dumai, Riau, Indonesia</strong>
+        </p>
+        <p class="d-none d-md-block">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde ipsum, ut nesciunt vel consectetur aspernatur
+          saepe doloribus commodi quisquam mollitia.
+        </p>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#modalInfo"
+          class="btn btn-outline-primary mt-3">Informasi Kota Dumai</button>
+      </div>
+    </div>
+  </div>
+  <!-- End of Banner -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalInfo">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5>Informasi Kota Dumai</h5>
+          <button class="btn btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" style="height:300px">
+          <blockquote cite="https://id.wikipedia.org/wiki/Kota_Dumai" class="blockquote">
+            <cite>Dari Wikipedia bahasa Indonesia, ensiklopedia bebas:</cite>
+            <br>
+            <br>
+            <p>
+              Dumai adalah sebuah kota di Provinsi Riau, Indonesia, sekitar 201 km dari Kota Pekanbaru. Kota Dumai
+              adalah kota dengan wilayah administrasi terluas kedua di Indonesia berdasarkan statusnya sebagai
+              kotamadya, setelah Kota Palangka Raya. Kota ini berawal dari sebuah dusun kecil di pesisir timur Provinsi
+              Riau.</p>
+            <br>
+            <p>
+              Kota Dumai merupakan hasil pemekaran dari Kabupaten Bengkalis. Diresmikan sebagai kota pada 20 April 1999,
+              dengan UU No. 16 tahun 1999 tanggal 20 April 1999 setelah sebelumnya sempat menjadi kota administratif
+              (kotif) di dalam Kabupaten Bengkalis. Pada awal pembentukannya, Kota Dumai hanya terdiri atas 3 kecamatan,
+              13 kelurahan dan 9 desa dengan jumlah penduduk hanya 15.699 jiwa dengan tingkat kepadatan 83,85 jiwa/km2.
+            </p>
+          </blockquote>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of modal -->
+
+  <!-- Accordion -->
+  <div class="container my-5 pt-2 pb-5 col-md-8 col-12">
+    <h2 class="text-center mb-4">Kota Dumai</h2>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            <div class="text-capitalize">Penghasil Minyak Bumi</div>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.</strong> Odit tenetur molestiae quod nobis
+            consequuntur asperiores corporis, ipsa, voluptas corrupti cumque illo, tempora laudantium facere saepe? Quam
+            alias, quasi architecto harum, optio voluptate ea qui aliquid temporibus distinctio corporis expedita error
+            a quos veritatis omnis iure vel soluta sequi nulla veniam.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <div class="text-capitalize">Wilayah administrasi terbesar kedua di Indonesia</div>
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</strong> Aliquid at error qui facere
+            consequatur omnis deserunt amet minus a. Nulla libero, ex sint dolorem, unde officia molestiae voluptas quae
+            similique illo architecto impedit itaque eius fuga nisi ad vitae. Totam in, veritatis blanditiis assumenda
+            dignissimos alias expedita voluptas officiis rerum porro! Earum dolore sequi debitis iste at facere non
+            incidunt optio voluptatibus est ipsum accusantium impedit placeat quisquam, rerum culpa quos dolor, soluta
+            adipisci veritatis quidem ratione. Esse doloribus ex mollitia atque nisi quisquam quod quis, eos rem
+            explicabo? Veniam, velit voluptates? Nostrum quis quaerat accusamus quisquam numquam necessitatibus
+            molestias.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <div class="text-capitalize">Sangat strategis untuk dijadikan kawasan perdagangan Internasional</div>
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.</strong> Aliquam fugit reprehenderit esse,
+            pariatur iste similique, iusto dolore, quaerat nisi eum quod. Maiores nam ad quasi ea dignissimos
+            praesentium dolorum repudiandae, fugiat dicta, molestias doloremque fuga nesciunt ipsam eveniet ullam in,
+            excepturi repellat libero assumenda? Odio nostrum nisi ipsam ab! Tempora quisquam laudantium cum quidem
+            optio sit quas rerum quaerat corporis ad, ea assumenda enim quos est temporibus iure fugiat, provident
+            architecto commodi aliquam amet. Quidem ab, iure sapiente tempora dolorum aperiam similique eaque ex? Ipsum
+            qui rerum atque voluptatem minus doloribus porro nostrum cumque veritatis eaque, pariatur velit adipisci
+            quia expedita iste omnis quam. Quod omnis asperiores debitis unde deleniti corrupti nam, consequuntur amet
+            eum tempora ut, fugiat exercitationem necessitatibus quaerat non distinctio voluptas quidem dicta impedit
+            sunt suscipit. Minima atque, nobis aliquid quis est cupiditate molestiae incidunt nostrum, id quam placeat?
+            Temporibus quis, eligendi repudiandae provident culpa tempora nesciunt.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <div class="text-capitalize">Tempat wisata yang menarik</div>
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.</strong> Aliquam fugit reprehenderit esse,
+            pariatur iste similique, iusto dolore, quaerat nisi eum quod. Maiores nam ad quasi ea dignissimos
+            praesentium dolorum repudiandae, fugiat dicta, molestias doloremque fuga nesciunt ipsam eveniet ullam in,
+            excepturi repellat libero assumenda? Odio nostrum nisi ipsam ab! Tempora quisquam laudantium cum quidem
+            optio sit quas rerum quaerat corporis ad, ea assumenda enim quos est temporibus iure fugiat, provident
+            architecto commodi aliquam amet. Quidem ab, iure sapiente tempora dolorum aperiam similique eaque ex? Ipsum
+            qui rerum atque voluptatem minus doloribus porro nostrum cumque veritatis eaque, pariatur velit adipisci
+            quia expedita iste omnis quam. Quod omnis asperiores debitis unde deleniti corrupti nam, consequuntur amet
+            eum tempora ut, fugiat exercitationem necessitatibus quaerat non distinctio voluptas quidem dicta impedit
+            sunt suscipit. Minima atque, nobis aliquid quis est cupiditate molestiae incidunt nostrum, id quam placeat?
+            Temporibus quis, eligendi repudiandae provident culpa tempora nesciunt.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Accordion -->
+
+  <div style="padding-bottom:10px"></div>
+
+  <!-- Carousel -->
+  <div class="container-fluid bg-dark-subtle my-5 py-5">
+    <div class="container">
+      <div id="carouselExampleCaptions" class="carousel slide col-lg-8 offset-lg-2" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://4.bp.blogspot.com/-bK-utTsZYbU/WyTFi3GHaqI/AAAAAAAACTU/tHs6pRuJ0M0Wu7NRyqwgB2EV0-31sth7wCLcBGAs/s1600/Goa-Pelintung.gif"
+              class="d-block w-100" alt="Goa Pelintung">
+            <div class="carousel-caption">
+              <h5>Goa Pelintung</h5>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://cdn-2.tstatic.net/pekanbaru/foto/bank/images/danau-bunga-tujuh.jpg"
+              class="d-block w-100 carouselsize" alt="Danau Bunga Tujuh">
+            <div class="carousel-caption">
+              <h5>Danau Bunga Tujuh</h5>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 carouselsize aturpict"
+              src="https://www.andalastourism.com/wp-content/uploads/2021/12/Daya-Tarik-Bandar-Bakau-Dumai.jpg"
+              alt="Hutan Mangrove">
+            <div class="carousel-caption">
+              <h5>Hutan Mangrove</h5>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- End ofCarousel -->
+  <div style="padding:60px"></div>
+  <!-- Blockquote -->
+  <div class="container-fluid py-5 bg-dark text-white">
+    <div class="container">
+      <h2 class="mb-5 text-center">Apa komentar tokoh terkenal?</h2>
+      <div>
+        <figure class="mb-4 text-md-start text-center">
+          <blockquote class="blockquote">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, ducimus?</p>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            <cite
+              title="Squidward Quincy Tentacles adalah karakter dalam animasi SpongeBob SquarePants. Dia adalah seekor gurita yang tinggal di rumah berbentuk moai. Bertetangga dengan SpongeBob dan Patrick Star, tetapi ia suka memiliki tetangga seperti mereka karena sering mengganggunya dalam hari santainya.">
+              Squidward Quincy Tentacles
+            </cite>
+          </figcaption>
+
+        </figure>
+        <figure class="mb-4 text-md-end text-center">
+          <blockquote class="blockquote">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, ducimus?</p>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            <cite
+              title="SpongeBob SquarePants adalah protagonis dari seri animasi SpongeBob SquarePants. Ia memiliki karakter yang optimis dan kekanak-kanakan. SpongeBob terinspirasi dari tokoh komedi seperti Stan Laurel dan Pee-Wee Herman. Karakter SpongeBob disuarakan oleh Tom Kenny, seorang aktor sekaligus komedian.">
+              SpongeBob SquarePants
+            </cite>
+          </figcaption>
+        </figure>
+
+        </figure>
+        <figure class="mb-4 text-md-start text-center">
+          <blockquote class="blockquote">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, ducimus?</p>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            <cite
+              title='Patrick Star adalah karakter fiksi dalam serial televisi animasi Amerika SpongeBob SquarePants. Dia disuarakan oleh aktor Bill Fagerbakke dan diciptakan dan dirancang oleh ahli biologi kelautan dan animator Stephen Hillenburg. Dia pertama kali muncul di episode pilot seri "Help Wanted" pada 1 Mei 1999.'>
+              Patrick Star
+            </cite>
+          </figcaption>
+        </figure>
+
+        </figure>
+        <figure class="mb-4 text-md-end text-center">
+          <blockquote class="blockquote">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, ducimus?</p>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            <cite
+              title='Eugene Harold Krabs, adalah karakter fiksi dalam seri animasi SpongeBob SquarePants. Krabs disuarakan Clancy Brown; kemunculan pertamanya di episode pilot berjudul "Help Wanted" yang tayang perdana pada 1 Mei 1999. Karakter ini diciptakan oleh Stephen Hillenburg, seorang animator dan ahli biologi laut.'>
+              Tuan Krabs
+            </cite>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <!-- End of Blockquote -->
+  <div style="padding:10px"></div>
+  <!-- Card -->
+  <div class="container-fluid py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Oleh-oleh Kota Dumai</h2>
+      <div class="row">
+        <div class="col-lg-3 mb-3">
+          <ul class="list-group">
+            <a href="#!" class="list-group-item active justify-content-between align-items-center d-flex"
+              aria-current="true">Kue Basah <span class="badge bg-white text-black rounded-pill">14</span></a>
+            <a href="#!" class="list-group-item justify-content-between align-items-center d-flex"
+              aria-current="true">Kue Kering <span class="badge bg-primary rounded-pill">2</span></a>
+            <a href="#!" class="list-group-item justify-content-between align-items-center d-flex"
+              aria-current="true">Kue-kuean <span class="badge bg-primary rounded-pill">7</span></a>
+            <a href="#!" class="list-group-item justify-content-between align-items-center d-flex"
+              aria-current="true">Mwhehehe <span class="badge bg-primary rounded-pill">0</span></a>
+          </ul>
+        </div>
+        <div class="col-lg-9">
+          <div class="row d-flex justify-content-center">
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+              <div class="card" style="height: 100%;">
+                <img
+                  src="https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2021/12/08/resep-bolu-kemojo-camilan-lembu-20211208110408.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Bolu Kemojo</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam voluptatem eaque,
+                    blanditiis dolores qui eum soluta delectus repellendus cumque ad!</p>
+                  <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Lihat</button>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item">Lihat item</li>
+                    <li class="dropdown-item">Beli item</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+              <div class="card" style="height: 100%;">
+                <img
+                  src="https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2021/12/08/resep-bolu-kemojo-camilan-lembu-20211208110408.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Bolu Kemojo</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam voluptatem eaque,
+                    blanditiis dolores qui eum soluta delectus repellendus cumque ad!</p>
+                  <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Lihat</button>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item">Lihat item</li>
+                    <li class="dropdown-item">Beli item</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+              <div class="card" style="height: 100%;">
+                <img
+                  src="https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2021/12/08/resep-bolu-kemojo-camilan-lembu-20211208110408.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Bolu Kemojo</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam voluptatem eaque,
+                    blanditiis dolores qui eum soluta delectus repellendus cumque ad!</p>
+                  <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Lihat</button>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item">Lihat item</li>
+                    <li class="dropdown-item">Beli item</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+              <div class="card" style="height: 100%;">
+                <img
+                  src="https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2021/12/08/resep-bolu-kemojo-camilan-lembu-20211208110408.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Bolu Kemojo</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam voluptatem eaque,
+                    blanditiis dolores qui eum soluta delectus repellendus cumque ad!</p>
+                  <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Lihat</button>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item">Lihat item</li>
+                    <li class="dropdown-item">Beli item</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- End of Card -->
+  <!-- Table -->
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nama Sekolah</th>
+            <th scope="col">Alamat Sekolah</th>
+            <th scope="col">Akreditasi</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr>
+            <th>1.</th>
+            <td>SMK Lorem, ipsum.</td>
+            <td>Jl. Lorem, ipsum.</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <th>2.</th>
+            <td>SMA Lorem, ipsum.</td>
+            <td>Jl. Lorem, ipsum.</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <th>3.</th>
+            <td>SMP Lorem, ipsum.</td>
+            <td>Jl. Lorem, ipsum.</td>
+            <td>B</td>
+          </tr>
+          <tr>
+            <th>4.</th>
+            <td>SD Lorem, ipsum.</td>
+            <td>Jl. Lorem, ipsum.</td>
+            <td>C</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- End of table -->
+  <!-- form -->
+  <div class="container-fluid bg-dark text-white">
+    <div class="container py-5 col-8 offset-2">
+      <h2 class="text-center mb-5">Pengaduan</h2>
+      <form>
+        <div class="mb-3">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="mb-2">
+                <label class="form-label" for="namadepan">Nama Depan</label>
+                <input type="text" id="namadepan" class="form-control" autocomplete="off">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <label class="form-label" for="namabelakang">Nama Belakang</label>
+              <input type="text" id="namabelakang" class="form-control" autocomplete="off">
+            </div>
+          </div>
+        </div>
+        <div class="my-3">
+          <label for="username" class="form-label">Username</label>
+          <div class="input-group">
+            <span class="input-group-text">@</span>
+            <input type="text" id="username" class="form-control" autocomplete="off">
+          </div>
+        </div>
+        <div class="my-3">
+          <label class="form-label" for="email">Email</label>
+          <div class="input-group">
+            <input type="email" id="email" class="form-control" autocomplete="off">
+            <span class="input-group-text">.com</span>
+          </div>
+          <label class="form-text text-secondary">*email anda tidak akan kami sebarluaskan</label>
+        </div>
+        <div class="my-3">
+          <label class="form-label" for="alamat">Alamat</label>
+          <input type="text" id="alamat" class="form-control" autocomplete="off">
+        </div>
+        <div class="my-3">
+          <label class="form-label" for="urgensi">Tingkat urgensi</label>
+          <select class="form-select" id="urgensi">
+            <option value="penting">Penting</option>
+            <option value="normal">Normal</option>
+            <option value="tidakpenting">Tidak Penting</option>
+          </select>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="radio" class="form-check-input" name="kategori" id="komplain">
+          <label class="form-check-label" for="komplain">Komplain</label>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="radio" class="form-check-input" name="kategori" id="saran">
+          <label class="form-check-label" for="saran">Saran</label>
+        </div>
+        <div class="mt-3">
+          <label class="form-label" for="deskripsi">Deskripsi</label>
+          <textarea id="deskripsi" cols="30" rows="10" class="form-control" autocomplete="off"></textarea>
+        </div>
+
+        <div>
+          <button type="button" class="btn btn-primary w-100 my-3" onclick="myFunction()" id="sendButton">Kirim</button>
+          <button type="button" class="btn btn-primary w-100 my-3 disabled" id="loadingButton">
+            <div class="spinner-border spinner-border-sm text-white"></div>
+          </button>
+        </div>
+      </form>
+      <div class="alert alert-success alert-dismissible my-2" id="FormAlert">
+        <i class="bi bi-check-circle-fill"></i> Laporan berhasil dikirim. Klik <a href="#" class="alert-link">disini</a>
+        untuk melihat laporan.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+      </div>
+    </div>
+  </div>
+  <!-- end of form -->
+
+  <script>
+    function symbolFunction(xSymbol) {
+      xSymbol.classList.toggle("ganti");
+    }
+
+    var FormAlert = document.getElementById('FormAlert')
+    FormAlert.style.display = 'none'
+
+    function alertFunction() {
+      FormAlert.style.display = 'block'
+    }
+
+    var sendButton = document.getElementById('sendButton');
+    var loadingButton = document.getElementById('loadingButton');
+    loadingButton.style.display = 'none';
+
+    function loadingFunction() {
+      sendButton.style.display = 'none';
+      loadingButton.style.display = 'block';
+    }
+
+    function finishFunction() {
+      sendButton.style.display = 'block';
+      loadingButton.style.display = 'none';
+    }
+
+    function myFunction() {
+      loadingFunction();
+
+      setTimeout(function () {
+        finishFunction(); alertFunction()
+      }, 3000);
+    }
+
+  </script>
+</body>
+
+</html>
